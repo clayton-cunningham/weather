@@ -125,7 +125,7 @@ export const Weather = () => {
         <div className="weather-container">
             <PageSection>
                 <h1 id="title">Weather</h1>
-                <h3>Find weather in a random place!</h3>
+                <h3>Find weather in a random location!</h3>
                 <button onClick={() => findWeather()} disabled={disable}>Find some weather!</button>
                 {weatherReport?.length > 0 ? (
                     <div style={{ minHeight: "400px"}}>
