@@ -17,6 +17,8 @@ export const getIcon = (descrip: string) => {
     if (descrip.includes("Rain")) return "rainy.png";
     if (descrip.includes("Fog")) return "foggy.png";
     if (descrip.includes("Cloudy")) return "cloudy.png";
+    if (descrip.includes("Drizzle")) return "rainy.png";
+    if (descrip.includes("Sunny")) return "sunny.png";
     // TODO: get a better template image
     else return "001.png";
 }
@@ -31,6 +33,7 @@ export const getDescription = (descrip: string) => {
     if (descrip.includes("Rain")) return "Rainy";
     if (descrip.includes("Fog")) return "Foggy";
     if (descrip.includes("Cloudy")) return "Cloudy";
+    if (descrip.includes("Drizzle")) return "Rainy";
     else return descrip;
 }
 

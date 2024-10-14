@@ -164,6 +164,11 @@ export const Weather = () => {
                 {showError && (
                     <p style={{"color":"red"}}>Error Occurred</p>
                 )}
+                <div className="github-link">
+                    <a href="https://github.com/clayton-cunningham/weather">
+                        <img src="github.png"/>
+                    </a>
+                </div>
             </PageSection>
         </div>
     )
