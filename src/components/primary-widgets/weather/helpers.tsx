@@ -34,6 +34,22 @@ export const getDescription = (descrip: string) => {
     if (descrip.includes("Fog")) return "Foggy";
     if (descrip.includes("Cloudy")) return "Cloudy";
     if (descrip.includes("Drizzle")) return "Rainy";
+    if (descrip.includes("Sunny")) return "Sunny";
+    else return descrip;
+}
+
+// Retrieve a style tag for the weather
+export const getStyleTag = (descrip: string) => {
+    if (descrip == "Sunny") return "sunny";
+    if (descrip == "Mostly Sunny" || descrip == "Partly Sunny") return "sunny";
+    if (descrip == "Mostly Cloudy" || descrip == "Partly Cloudy") return "cloudy";
+    if (descrip == "Cloudy") return "cloudy";
+    if (descrip.includes("Thunder")) return "rain";
+    if (descrip.includes("Rain")) return "rain";
+    if (descrip.includes("Fog")) return "cloudy";
+    if (descrip.includes("Cloudy")) return "cloudy";
+    if (descrip.includes("Drizzle")) return "rain";
+    if (descrip.includes("Sunny")) return "sunny";
     else return descrip;
 }
 

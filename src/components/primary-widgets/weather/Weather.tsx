@@ -5,7 +5,7 @@ import axios from "axios";
 import axiosRetry from 'axios-retry';
 import "./Weather.less";
 import { useEffect, useState } from "react";
-import { WeatherReportStructure, getDescription, getIcon, weatherLocationSamples } from "./helpers";
+import { WeatherReportStructure, getDescription, getIcon, getStyleTag, weatherLocationSamples } from "./helpers";
 // @ts-ignore
 import randomLocation from "random-location";
 import { TriangleSlide, TriangleSlideDirection } from "../../generic/TriangleSlide";
@@ -122,17 +122,17 @@ export const Weather = () => {
     }
 
     return (
-        <div className="weather-container">
+        <div className={"weather-container" + (weatherReport?.length > 0 ? (" background-color-" + getStyleTag(weatherReport[0]?.shortForecast)) : "")}>
             <PageSection>
-                <h1 id="title">Weather</h1>
-                <h3>Find weather in a random location!</h3>
+                {/* <h1 id="title">Weather</h1> */}
+                <h2 id="title">Find weather in a random location!</h2>
                 <button onClick={() => findWeather()} disabled={disable}>Find some weather!</button>
                 {weatherReport?.length > 0 ? (
                     <div style={{ minHeight: "400px"}}>
                         {
                             !resetUIData && (
                                 <div className="row">
-                                    <Column className="fade-up">
+                                    <Column className="fade-up today">
                                         <h2>{location}</h2>
                                         <img className="icon-img" alt={"Image not available; " + weatherReport[0]?.shortForecast} src={"weather-widget/" + getIcon(weatherReport[0]?.shortForecast)} />
                                         <h3>{weatherReport[0]?.temperature}&deg;</h3>

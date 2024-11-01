@@ -1,11 +1,13 @@
 
 .weather-container {
-    background-color: aquamarine;
+    background-color: lightblue;
+    transition: .5s;
+
     color: black;
     position: relative;
     z-index: 0;
     overflow: hidden;
-    width: 100vw;
+    width: 90vw;
     min-height: 675px;
 
     #title {
@@ -33,6 +35,15 @@
         height: revert;
         z-index: -1;
         opacity: 0.8;
+    }
+
+    .today {
+        background-color: aliceblue;
+        border: 5px;
+        border-radius: 10px;
+        border-color: black;
+        border-style: solid;
+        padding: 20px;
     }
 
     .weather-list {
@@ -113,3 +124,7 @@
         height: 50px;
     }
 }
+
+.background-color-sunny { background-color: aqua ;}
+.background-color-cloudy { background-color: grey ;}
+.background-color-rain { background-color: darkslategray ;}
