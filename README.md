@@ -31,7 +31,7 @@ npm install
 
 ### 3. Run the app
 ```bash
-npm start
+npm run dev
 ```
 
 The app should now be running at http://localhost:5173.
