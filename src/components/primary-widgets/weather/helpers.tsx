@@ -15,6 +15,7 @@ export const getIcon = (descrip: string) => {
     if (descrip == "Cloudy") return "cloudy.png";
     if (descrip.includes("Thunder")) return "thunderstorms.png";
     if (descrip.includes("Rain")) return "rainy.png";
+    if (descrip.includes("Snow")) return "snow.png";
     if (descrip.includes("Fog")) return "foggy.png";
     if (descrip.includes("Cloudy")) return "cloudy.png";
     if (descrip.includes("Drizzle")) return "rainy.png";
@@ -31,6 +32,7 @@ export const getDescription = (descrip: string) => {
     if (descrip == "Cloudy") return "Cloudy";
     if (descrip.includes("Thunder")) return "Thunder";
     if (descrip.includes("Rain")) return "Rainy";
+    if (descrip.includes("Snow")) return "Snow";
     if (descrip.includes("Fog")) return "Foggy";
     if (descrip.includes("Cloudy")) return "Cloudy";
     if (descrip.includes("Drizzle")) return "Rainy";
@@ -46,6 +48,7 @@ export const getStyleTag = (descrip: string) => {
     if (descrip == "Cloudy") return "cloudy";
     if (descrip.includes("Thunder")) return "rain";
     if (descrip.includes("Rain")) return "rain";
+    if (descrip.includes("Snow")) return "cloudy";
     if (descrip.includes("Fog")) return "cloudy";
     if (descrip.includes("Cloudy")) return "cloudy";
     if (descrip.includes("Drizzle")) return "rain";
@@ -56,15 +59,13 @@ export const getStyleTag = (descrip: string) => {
 export const weatherLocationSamples = [
     {latitude: 40.798, longitude: -74.484},
     {latitude: 39.499, longitude: -75.004},
-    {latitude: 39.838, longitude: -74.452},
-    {latitude: 40.270, longitude: -74.332},
-    {latitude: 40.493, longitude: -74.840},
-    {latitude: 40.718, longitude: -74.409},
-    {latitude: 40.848, longitude: -74.809},
-    {latitude: 41.050, longitude: -74.397},
-    {latitude: 40.769, longitude: -73.991},
-    {latitude: 40.572, longitude: -75.465},
-    {latitude: 41.041, longitude: -75.117},
-    {latitude: 41.215, longitude: -74.695},
-    {latitude: 41.381, longitude: -73.675},
+    {latitude: 45.955, longitude: -119.565},
+    {latitude: 39.533, longitude: -105.293},
+    {latitude: 39.812, longitude: -83.306},
+    {latitude: 35.752, longitude: -115.610},
+    {latitude: 44.911, longitude: -108.433},
+    {latitude: 47.052, longitude: -75.117},
+    {latitude: 30.481, longitude: -97.894},
+    {latitude: 34.742, longitude: -83.518},
+    {latitude: 39.111, longitude: -90.717},
 ]
